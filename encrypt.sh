@@ -13,5 +13,3 @@ MSG4=${STATE[$NOTRANDOM % ${#STATE[@]} ]}
 
 echo $MSG1 $MSG2 $MSG3 $MSG4 | \
   openssl rsautl -encrypt -inkey bob.pub -pubin -out message.enc
-
-openssl rsautl -decrypt -inkey bob.key -in message.enc
